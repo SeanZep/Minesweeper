@@ -23,8 +23,14 @@ void setup ()
 }
 public void setBombs()
 {
-    int row = (int)(Math.random()*NUM_ROWS);
-    int col = (int)(Math.random()*NUM_COLS);
+    for(int i = 0; i<20; i++){
+        int row = (int)(Math.random()*NUM_ROWS);
+        int col = (int)(Math.random()*NUM_COLS);
+        System.out.println(row);
+        System.out.println(col);
+        if(!bombs.contains(buttons[row][col]))
+            bombs.add(buttons[row][col]);
+    }
     
 }
 
